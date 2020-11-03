@@ -9,13 +9,17 @@ $whoops->register();
 
 $router = new AltoRouter();
 
-$router->map('GET', '/', function() {
-    require dirname( __DIR__) . '/views/home.php';
+$router->map('GET|POST', '/', function() {
+    require dirname( __DIR__) . '/views/connexion.php';
+});
+$router->map('GET|POST', '/inscription', function() {
+    require dirname( __DIR__) . '/views/register.php';
+});
+$router->map('GET', '/explorer', function() {
+    require dirname( __DIR__) . '/views/explorer.php';
 });
 
-$router->map('GET', '/', function() {
-    require dirname( __DIR__) . '/assets/css/styles.css';
-});
+
 
 $match = $router->match();
 $match['target']();

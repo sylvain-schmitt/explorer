@@ -4,7 +4,7 @@
 
  ?>
 
-<?php include 'block/navbar.html' ?>
+<?php include 'block/navbar.php' ?>
 
 
 <div class="container-fluid h-100">
@@ -43,6 +43,6 @@
   
 
 
-<?php include 'block/footer.html' ?>
+<?php include 'block/footer.php' ?>
 
 
