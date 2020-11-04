@@ -1,8 +1,14 @@
 <?php
-$title = 'Connection'
+$title = 'Connection';
 
+if($_POST){
+  if(isset($_POST['username']) && !empty($_POST['username'])
+  && isset($_POST['password']) && !empty($_POST['password'])){
+
+      header('Location: dossier');
+  }
+}
 ?>
-<?php include 'block/navbar.php' ?>
 
 
 <h1 class="text-center">Bienvenu sur l'explorateur de fichier</h1>
@@ -17,12 +23,11 @@ $title = 'Connection'
     </div>
 
     <!-- Login Form -->
-    <form>
-      <input method="POST" type="text" id="login" class="fadeIn second" name="username" placeholder="Nom d'utilisateur">
-      <input method="POST" type="text" id="password" class="fadeIn third" name="password" placeholder="Mot de passe">
+    <form action="" method="POST">
+      <input  type="text" id="login" class="fadeIn second" name="username" placeholder="Nom d'utilisateur" required>
+      <input  type="text" id="password" class="fadeIn third" name="password" placeholder="Mot de passe" required>
       <input type="submit" class="fadeIn fourth" value="Connexion">
     </form>
-
     <!-- Remind Passowrd -->
     <div id="formFooter">
       <a class="underlineHover" href="inscription">Inscrivez vous pour accéder à l'explorateur </a>
@@ -30,4 +35,3 @@ $title = 'Connection'
 
   </div>
 </div>
-<?php include 'block/footer.php' ?>

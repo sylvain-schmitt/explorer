@@ -1,10 +1,8 @@
 <?php 
 
  $title = 'Explorer';
-
  ?>
 
-<?php include 'block/navbar.php' ?>
 
 
 <div class="container-fluid h-100">
@@ -41,8 +39,4 @@
   </div>
 </div>
   
-
-
-<?php include 'block/footer.php' ?>
-
 
