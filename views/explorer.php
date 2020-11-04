@@ -1,6 +1,10 @@
 <?php 
-
+session_start();
  $title = 'Explorer';
+ if(empty($_SESSION['user'])){
+   header('Location: /');
+ }
+  
  ?>
 
 
@@ -9,7 +13,7 @@
   <div class="row h-100">
     <aside class="col-12 col-md-2 p-0 bg-light">
         <div class="w-20 border">
-  <h6 class="pt-3 pl-3">Dossier</h6>
+  <h6 class="pt-3 pl-3 ">Dossier</h6>
   <hr>
   <ul class="mb-1 pl-3 pb-2" id="myUL">
     <li><i class="caret fas fa-angle-right rotate"></i> 

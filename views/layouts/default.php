@@ -22,9 +22,16 @@
       
     </ul>
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="#"><i class="far fa-user"></i> Nom du connecter</a>
-      </li>
+      <?php
+      if(isset($_SESSION['user']) && !empty($_SESSION['user'])): ?>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="far fa-user"></i> <?= $_SESSION['user']['username'] ?></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="deconnexion"><i class="far fa-user"></i> Déconnexion</a>
+        </li>
+      <?php endif; ?>
+         
     </ul>
   </div>
 </nav>
