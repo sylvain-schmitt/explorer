@@ -28,7 +28,7 @@
           <a class="nav-link" href="#"><i class="far fa-user"></i> <?= $_SESSION['user']['username'] ?></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="deconnexion"><i class="far fa-user"></i> Déconnexion</a>
+          <a class="nav-link" href="deconnexion"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
         </li>
       <?php endif; ?>
          

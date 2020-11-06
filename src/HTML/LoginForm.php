@@ -19,10 +19,10 @@ class LoginForm{
                 <!-- Login Form -->
                 <form action="" method="POST">
                 <div class="form-group">
-                    <input  type="text" id="login" class="fadeIn second" name="username" placeholder="Nom d'utilisateur" required>
+                    <input  type="text" id="login" class="fadeIn second" name="username" placeholder="Nom d'utilisateur" >
                 </div>
                 <div class="form-group">
-                    <input  type="password" id="password" class="fadeIn third" name="password" placeholder="Mot de passe" required>
+                    <input  type="password" id="password" class="fadeIn third" name="password" placeholder="Mot de passe" >
                 </div>
                 <div class="form-group">
                     <input type="submit" class="fadeIn fourth" value="Connexion">

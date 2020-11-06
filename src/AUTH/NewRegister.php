@@ -7,6 +7,8 @@ use App\Connection;
 
 class NewRegister{
 
+
+
     public function newuser(){
         $pdo = Connection::getPDO();
         
@@ -14,7 +16,6 @@ class NewRegister{
         $password = strip_tags($_POST['password']);
         $password = password_hash($_POST['password'], PASSWORD_ARGON2I);
         $role = 'user';
-
         $sql = "INSERT INTO user (username, password, role) VALUES (:username, :password, :role)";
         $query = $pdo->prepare($sql);
 
@@ -31,11 +32,6 @@ class NewRegister{
         return $ok;
     }
 
-    public function registererror(){
 
-       return <<<HTML
-             <div class="container mt-4" ><div class="alert alert-danger" role="alert"> {$_SESSION['erreur']}</div></div>
-        
-HTML;       
-    }
+
 }

@@ -1,28 +1,33 @@
 <?php
+use App\AUTH\NewError;
 use App\AUTH\NewRegister;
-use App\Connection;
+use App\AUTH\VerifUser;
 use App\HTML\RegisterForm;
 
 $title = 'Inscription';
-$pdo = Connection::getPDO();
 $form = new RegisterForm;
-$error = new NewRegister;
+$error = new NewError;
 $user =  new NewRegister;
+$num_row = new VerifUser;
 if($_POST){
     if(isset($_POST['username']) && !empty($_POST['username'])
     && isset($_POST['password']) && !empty($_POST['password'])
     && isset($_POST['confirm_password']) && !empty($_POST['confirm_password'])){
-        $user->newuser();
-        header('Location: dossier');
+        if($num_row->verifuser() == 1){
+            $_SESSION['erreur'] = "Ce nom d'utilisateur est déjà pris";
+            
+        }else{
+            $user->newuser();
+            header('Location: /');
+        }
 
     }else{
         $_SESSION['erreur'] = "Le formulaire est incomplet";
     }
   }
-  
-?>
 
-<?php if(!empty($_SESSION['erreur'])): echo $error->registererror(); endif; ?>
+?>
+<?php if(!empty($_SESSION['erreur'])): echo $error->error(); endif; ?>
 <?= $form->register(); ?> 
 
 

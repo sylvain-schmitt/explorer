@@ -1,36 +1,31 @@
-###Créer un explorateur de fichier avec un système d'upload.
+###Installer Mysql:
 
-- L'utilisateur ayant le role **admin** peut créer + modifier + supprimer un fichier. Parcourir les fichiers et se connecter
-- L'utilisateur ayant le role **user** peut parcourir les fichiers + télécharger en .pdf
+https://dev.mysql.com/downloads/file/?id=499589
+
+Choisir server only
+
+Laisser tout les params' par défaut 
+Choisir comme mot de passe toortoor
 
 
-Il faut une base de donnée avec une table **user** avec les champs (username, password, role)
+- Click droit «Ce PC»
 
-Vous devez utiliser les packages:
+- Propriétés
 
-- Altorouter 
-- Var-dumper
-- Whoops
+- Paramètres système avance 
 
-Type de fichier: png / jpeg / pdf.
+- En bas variables d’environnement, 
+- Selectionner path dans les variables systèmes
+- Puis cliquer sur modifier 
+- "Nouveau"
+- Et coller l’url : `C:\Program Files\MySQL\MySQL Server 8.0\bin`
 
-Front: Vous pouvez utiliser bootstrap ou css à la maison.
 
-Le fichier composer.json:
 
-```json
-{
-    "autoload": {
-        "psr-4": {
-            "App\\": "src/"
-        }
-    },
-    "require": {
-        "altorouter/altorouter": "^2.0",
-        "symfony/var-dumper": "^5.1",
-        "filp/whoops": "^2.7",
-        "fzaninotto/faker": "^1.9",
-        "ext-pdo": "*"
-    }
-}
-```
+- Redémarrer
+- Puis ouvrir PHPStorm ou terminal de VS CODE
+- Taper la commande mysql -v 
+- Si une erreur de type "Access denied" c’est bon 
+-Aller dans le dossier puis clic droit « Git Bash Here »
+- lancer le serveur intern de PHP : 127.0.0.1:8080 -t public
+- aller sur l’adresse  
