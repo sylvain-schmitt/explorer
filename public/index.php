@@ -12,4 +12,5 @@ $router
     ->match('/inscription', 'register', 'inscription')
     ->match('/dossier', 'explorer', 'dossier')
     ->match('/deconnexion', 'logout', 'deconnexion')
+
     ->run();

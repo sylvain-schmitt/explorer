@@ -1,12 +1,16 @@
-/*--treeway de l'explorer--*/
-var toggler = document.getElementsByClassName("caret");
-var i;
-
-for (i = 0; i < toggler.length; i++) {
-  toggler[i].addEventListener("click", function() {
-    this.parentElement.querySelector(".nested").classList.toggle("active");
-    this.classList.toggle("caret-down");
-  });
+// OUVRIR / FERMER les DOSSIERS : En JavaScript pur (SANS jQuery)
+window.onload = function() {
+	var explorateur_dirs = document.querySelectorAll('#explorateur-dossier .dir');
+	for( index=0; index < explorateur_dirs.length; index++ ) 
+	{
+	  explorateur_dirs[index].addEventListener('click', function(ev){ opencloseSubDir(this); ev.stopPropagation(); }, false);
+	}
+};
+function opencloseSubDir( dossier ) 
+{
+  var ul = dossier.querySelector('ul');
+  ul.style.display = (ul.style.display!='block')? 'block':'none';
+ 
 }
 /*--confiration de mot de passe--*/
 var password = document.getElementById("password")

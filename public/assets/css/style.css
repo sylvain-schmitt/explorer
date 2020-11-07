@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;1,400;1,800&display=swap');
 
+
 h1{
     font-family: 'Montserrat', sans-serif;
     margin-top: 20px;
@@ -38,29 +39,50 @@ ul, #myUL {
   .border {
     height: 100%;
   }
-  
-  .caret {
-    cursor: pointer;
-    margin-left: 6px;
-  }
-  
-  .caret::before {
-    color: black;
-    display: inline-block;
-    margin-right: 6px;
-  }
-  
-  .caret-down::before {
-    transform: rotate(90deg);
-  }
-  
-  .nested {
-    display: none;
-  }
-  
-  .active {
-    display: block;
-  }
+
+#explorateur-dossier ul { 
+  margin:0; padding:0; 
+  list-style:none outside none; 
+}
+
+#explorateur-dossier .dir { 
+  position:relative; 
+  padding-left:20px; 
+  cursor:pointer; 
+}
+
+#explorateur-dossier .sub_dir { 
+  position:relative; 
+  padding-left:20px; 
+  cursor:pointer; 
+  display:none; 
+}
+
+#explorateur-dossier .fil { 
+  position:relative; 
+  padding-left:20px; 
+}
+
+#explorateur-dossier .dir:before { 
+  position:absolute; 
+  content:''; 
+  display:block; width:16px; 
+  height:16px; top:2px; 
+  left:0; 
+  background:url("../img/folder.png") no-repeat; 
+}
+
+#explorateur-dossier .fil:before { 
+  position:absolute; 
+  content:''; 
+  display:block; 
+  width:16px; 
+  height:16px; 
+  top:2px; 
+  left:0; 
+  background:url("../img/file.png") no-repeat;
+ }
+
   /*--fin sidebar--*/
 
   .logo {
