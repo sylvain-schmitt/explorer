@@ -40,48 +40,6 @@ ul, #myUL {
     height: 100%;
   }
 
-#explorateur-dossier ul { 
-  margin:0; padding:0; 
-  list-style:none outside none; 
-}
-
-#explorateur-dossier .dir { 
-  position:relative; 
-  padding-left:20px; 
-  cursor:pointer; 
-}
-
-#explorateur-dossier .sub_dir { 
-  position:relative; 
-  padding-left:20px; 
-  cursor:pointer; 
-  display:none; 
-}
-
-#explorateur-dossier .fil { 
-  position:relative; 
-  padding-left:20px; 
-}
-
-#explorateur-dossier .dir:before { 
-  position:absolute; 
-  content:''; 
-  display:block; width:16px; 
-  height:16px; top:2px; 
-  left:0; 
-  background:url("../img/folder.png") no-repeat; 
-}
-
-#explorateur-dossier .fil:before { 
-  position:absolute; 
-  content:''; 
-  display:block; 
-  width:16px; 
-  height:16px; 
-  top:2px; 
-  left:0; 
-  background:url("../img/file.png") no-repeat;
- }
 
   /*--fin sidebar--*/
 
@@ -100,9 +58,9 @@ body {
 }
 
 a {
+  text-decoration: none;
   color: #2c2f31;
   display:inline-block;
-  text-decoration: none;
   font-weight: 400;
 }
 
