@@ -12,5 +12,6 @@ $router
     ->match('/inscription', 'register', 'inscription')
     ->match('/dossier', 'explorer', 'dossier')
     ->match('/deconnexion', 'logout', 'deconnexion')
+    ->match('/files/[*:slug]', 'fichier', 'files')
 
     ->run();
