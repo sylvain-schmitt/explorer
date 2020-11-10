@@ -15,33 +15,25 @@ p{
 }
 
 
-/*--debut sidebar--*/
 ul, li {
     list-style-type: none;
   }
   
-  #myUL {
-    margin: 0;
-    padding: 0;
-  }
-
-  .pl-3{
-    margin-left: 9%;
-  }
-  .border {
-    height: 100%;
-  }
-
   .footer{
     bottom: 0;
-    position: fixed;
     width: 100%;
+    text-align: center;
+    position: fixed;
   }
 
+ 
   /*Dossier Fichier*/
 .explore{
+
+  margin: 0 auto;
   margin-top: 50px;
-  margin-bottom: 300px;
+  padding-left: 50px;
+
 }
 .folder{ 
   cursor: pointer;
@@ -71,20 +63,29 @@ ul, li {
 .d{
     margin-left: 5px; 
 }
+.error-template {
+  margin: 0 auto;
+  margin-top: 200px;
+  text-align: center;
+  width: 400px;
+  height: 100px;
+  background-color: #f8f9fa;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 10px 20px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 10px 20px 0 rgba(0,0,0,0.3);
 
+}
 
-
-
-  /*--fin sidebar--*/
+.error-template h1 {
+  padding: 0 auto;
+ 
+}
 
   .logo {
       width: 50px;
   }
 
   /*-- page de connection--*/
-
-/* BASIC */
-
 
 
 body {
@@ -157,8 +158,9 @@ h2.active {
 }
 
 .tool{
-  bottom: 200px;
-  position: fixed;
+  margin: 0 auto;
+  margin-top: 200px;
+  margin-bottom: 200px;
   width: 90%;
 
 }

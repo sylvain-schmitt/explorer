@@ -39,7 +39,7 @@
     <?= $content ?>
 
   <footer class="bg-light py-4 footer">
-      <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <div class="footer-copyright py-3">© 2020 Copyright:
           <a href="#"> L'amour est dans le code</a>
       </div>
   </footer>
