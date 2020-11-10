@@ -3,7 +3,9 @@ namespace App\HTML;
 
 class ModalDoss{
 
-    public function modalDossier($role){
+
+
+    public function modalDossier(){
 
         return <<<HTML
 					
@@ -11,7 +13,7 @@ class ModalDoss{
 							<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#creerDossier">Créer un dossier</button>
 						</div>
 						<div class="btn-group" role="group" aria-label="Basic example">
-							<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#">Suppimer un  dossier</button>
+							<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#supprDossier">Suppimer un  dossier</button>
 						</div>							
 						
 				</div>
@@ -43,6 +45,7 @@ class ModalDoss{
 				</div>
 				</div>
             </form>
+
 HTML;
     }
 

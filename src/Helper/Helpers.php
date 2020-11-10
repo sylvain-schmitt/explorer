@@ -2,6 +2,7 @@
 namespace App\Helper;
 
 class Helpers{
+
     public function alert(){
 
         if(!empty($_SESSION['erreur'])):
