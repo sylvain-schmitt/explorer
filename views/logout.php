@@ -7,5 +7,5 @@
 session_start();
 $title = 'Déconnexion';
 unset($_SESSION['user']);
-
-header('Location: ../');
+//session_destroy();
+header('Location: /');

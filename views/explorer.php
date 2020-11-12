@@ -4,9 +4,11 @@ use App\Helper\Helpers;
 use App\HTML\ModalDoss;
 
 session_start();
- $title = 'Explorer';
- if(empty($_SESSION['user'])){
-   header('Location: /');
+$title = 'Explorer';
+if ((!isset($_SESSION['user'])) || (empty($_SESSION['user'])))
+    {
+	header('Location: /');
+	exit;
 }
 $role = $_SESSION['user']['role'];
 $rep = new Helpers;

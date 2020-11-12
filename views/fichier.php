@@ -5,8 +5,10 @@ use App\HTML\ModalUpload;
 
 session_start();
  $title = 'Explorer';
- if(empty($_SESSION['user'])){
-   header('Location: /');
+ if ((!isset($_SESSION['user'])) || (empty($_SESSION['user'])))
+    {
+	header('Location: /');
+	exit;
 }
 
 $file = new Helpers;
