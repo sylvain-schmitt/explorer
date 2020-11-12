@@ -73,8 +73,8 @@ if (isset($_POST) && !empty($_POST)) {
 					<?php  if($role === 'admin'): ?> 
 						<?= $folder->modalDossier(); ?>
 					<?php endif; ?>
-					            <!--Modal delete folder -->
-								<form action="" method="post">
+			<!--Modal delete folder -->
+			<form action="" method="post">
 				<div class="modal fade" id="supprDossier" tabindex="-1" role="dialog" aria-labelledby="supprDossier" aria-hidden="true">
 				<div class="modal-dialog" role="document">
 					<div class="modal-content">
@@ -97,7 +97,7 @@ if (isset($_POST) && !empty($_POST)) {
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
-						<button type="submit"  class="btn btn-primary">supprimer</button>
+						<button type="submit"  class="btn btn-primary" onclick="return confirm('Voulez vous vraiment supprimer ce dossier ?')">supprimer</button>
 					</div>
 					</div>
 				</div>

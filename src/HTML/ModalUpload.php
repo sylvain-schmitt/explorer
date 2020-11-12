@@ -8,7 +8,12 @@ class ModalUpload{
         							
 							<div class="btn-group" role="group" aria-label="Basic example">
 								<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#uploadFichier">Uploader un fichier</button>
-							</div>							
+							</div>
+							<div class="btn-group" role="group" aria-label="Basic example">
+								<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#delete">Suppimer un fichier</button>
+							</div>
+						</div>
+								
 				</div>
             </div>
 			<!-- Modal upload files--> 
