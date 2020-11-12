@@ -23,7 +23,7 @@ $folders[] = $file ;
 
 } 
 } 
-closedir($dir); 
+closedir($dir);  
 
 if (isset($_POST) && !empty($_POST)) {
 
@@ -71,9 +71,8 @@ if (isset($_POST) && !empty($_POST)) {
 					<?php  if($role === 'admin'): ?> 
 						<?= $folder->modalDossier(); ?>
 					<?php endif; ?>
-		            <!--Modal delete folder -->
-            
-					<form action="" method="post">
+					            <!--Modal delete folder -->
+								<form action="" method="post">
 				<div class="modal fade" id="supprDossier" tabindex="-1" role="dialog" aria-labelledby="supprDossier" aria-hidden="true">
 				<div class="modal-dialog" role="document">
 					<div class="modal-content">
@@ -101,8 +100,7 @@ if (isset($_POST) && !empty($_POST)) {
 					</div>
 				</div>
 				</div>
-            </form>		
-
+            </form>	
 </div>
   
 

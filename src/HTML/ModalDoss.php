@@ -45,7 +45,6 @@ class ModalDoss{
 				</div>
 				</div>
             </form>
-
 HTML;
     }
 

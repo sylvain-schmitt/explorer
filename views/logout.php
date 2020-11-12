@@ -8,4 +8,4 @@ session_start();
 $title = 'Déconnexion';
 unset($_SESSION['user']);
 
-header('Location: /');
+header('Location: ../');
