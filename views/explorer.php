@@ -46,12 +46,16 @@ else {
 }
 
 if (isset($_POST) && !empty($_POST)) {
+
 	
 	if (isset($_POST['folder']) && !empty($_POST['folder'])) {
-	$nom = $_POST['folder'];
-	if (is_dir('upload/' . $nom)) {
-	rmdir('upload/' . $nom);
-	$_SESSION['message'] = 'Le répertoire a bien été supprimé!';
+		$nom = $_POST['folder'];
+		$scan = scandir('upload/' . $nom);
+	if (count($scan)!=2)  {
+		$_SESSION['erreur'] = 'Le répertoire n\'est pas vide!';
+	}else {
+		rmdir('upload/' . $nom);
+		$_SESSION['message'] = 'Le répertoire a bien été supprimé!';
 	}
 	
 	}
