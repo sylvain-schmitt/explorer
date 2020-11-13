@@ -8,6 +8,6 @@
         "altorouter/altorouter": "^2.0",
         "symfony/var-dumper": "^5.1",
         "filp/whoops": "^2.9",
-        "dompdf/dompdf": "^0.8.6"
+        "spipu/html2pdf": "^5.2"
     }
 }

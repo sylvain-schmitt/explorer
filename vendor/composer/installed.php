@@ -1,24 +1,24 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => '1.0.0+no-version-set',
-    'version' => '1.0.0.0',
+    'pretty_version' => 'dev-main',
+    'version' => 'dev-main',
     'aliases' => 
     array (
     ),
-    'reference' => NULL,
+    'reference' => '573fc7fe754214319965163b2dbc048c43127e14',
     'name' => '__root__',
   ),
   'versions' => 
   array (
     '__root__' => 
     array (
-      'pretty_version' => '1.0.0+no-version-set',
-      'version' => '1.0.0.0',
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
       'aliases' => 
       array (
       ),
-      'reference' => NULL,
+      'reference' => '573fc7fe754214319965163b2dbc048c43127e14',
     ),
     'altorouter/altorouter' => 
     array (
@@ -29,15 +29,6 @@
       ),
       'reference' => '127f6e96998708a31ef32252985bea82e3b03888',
     ),
-    'dompdf/dompdf' => 
-    array (
-      'pretty_version' => 'v0.8.6',
-      'version' => '0.8.6.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'db91d81866c69a42dad1d2926f61515a1e3f42c5',
-    ),
     'filp/whoops' => 
     array (
       'pretty_version' => '2.9.1',
@@ -46,24 +37,6 @@
       array (
       ),
       'reference' => '307fb34a5ab697461ec4c9db865b20ff2fd40771',
-    ),
-    'phenx/php-font-lib' => 
-    array (
-      'pretty_version' => '0.5.2',
-      'version' => '0.5.2.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => 'ca6ad461f032145fff5971b5985e5af9e7fa88d8',
-    ),
-    'phenx/php-svg-lib' => 
-    array (
-      'pretty_version' => 'v0.3.3',
-      'version' => '0.3.3.0',
-      'aliases' => 
-      array (
-      ),
-      'reference' => '5fa61b65e612ce1ae15f69b3d223cb14ecc60e32',
     ),
     'psr/log' => 
     array (
@@ -74,14 +47,14 @@
       ),
       'reference' => '0f73288fd15629204f9d42b7055f72dacbe811fc',
     ),
-    'sabberworm/php-css-parser' => 
+    'spipu/html2pdf' => 
     array (
-      'pretty_version' => '8.3.1',
-      'version' => '8.3.1.0',
+      'pretty_version' => 'v5.2.2',
+      'version' => '5.2.2.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'd217848e1396ef962fb1997cf3e2421acba7f796',
+      'reference' => 'e6d8ca22347b6691bb8c2652212b1be2c89b3eff',
     ),
     'symfony/polyfill-mbstring' => 
     array (
@@ -109,6 +82,15 @@
       array (
       ),
       'reference' => '4e13f3fcefb1fcaaa5efb5403581406f4e840b9a',
+    ),
+    'tecnickcom/tcpdf' => 
+    array (
+      'pretty_version' => '6.3.5',
+      'version' => '6.3.5.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '19a535eaa7fb1c1cac499109deeb1a7a201b4549',
     ),
   ),
 );

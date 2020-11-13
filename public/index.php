@@ -13,5 +13,6 @@ $router
     ->match('/dossier', 'explorer', 'dossier')
     ->match('/deconnexion', 'logout', 'deconnexion')
     ->match('/files/[*:slug]', 'fichier', 'files')
+    ->match('/pdf', 'pdf', 'download')
 
     ->run();

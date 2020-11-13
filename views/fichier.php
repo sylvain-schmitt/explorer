@@ -43,7 +43,7 @@ if (isset($_POST) && !empty($_POST)) {
 	
 	}
 	}
-
+	
  
 	?>
 
@@ -51,7 +51,7 @@ if (isset($_POST) && !empty($_POST)) {
 	<div class="container ">
 	<?php $alert->alert();?>
 			<div class="row explore ">
-				<?php $file->lister_fichiers($url); ?>
+					<?php $file->lister_fichiers($url); ?>
 				<div class="text-center tool">
 					<div class="btn-group" role="group" aria-label="Basic example">
 						<button type="button" class="btn btn-secondary"><a class="underlineTool " href="/dossier">Retour </a></button>

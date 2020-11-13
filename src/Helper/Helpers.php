@@ -61,7 +61,7 @@ public function lister_fichiers($rep)
 				
 				$extends = explode('.', $fichier)[1];
                 $ext = strtolower ($extends);
-                $path = explode('files', $_SERVER['REQUEST_URI'])[1];
+				$path = explode('files', $_SERVER['REQUEST_URI'])[1];
                 $url = '/upload' . $path;
 				if($fichier != "." && $fichier != "..")  
 				{  
@@ -70,13 +70,13 @@ public function lister_fichiers($rep)
 						echo   "<div class=\" col-lg-2 col-md-4 col-6 folder item\"><a  class='underlineHover' target=\"blank\"  href=\"$url/$fichier\"><img src='../assets/img/pdf.png'><li class='d text-center'> " . ucfirst($fichier) . " </li></a></div>";
 					}
 					if ($ext == 'jpg' ){
-						echo   "<div class=\" col-lg-2 col-md-4 col-6 folder item\"><a  class='underlineHover' target=\"blank\" href=\"$url/$fichier\"><img src='../assets/img/jpg.png'><li class='d text-center'> " . ucfirst($fichier) . " </li></a></div>";
+						echo   "<div class=\" col-lg-2 col-md-4 col-6 folder item\"><a  class='underlineHover' target=\"blank\" href=\"../pdf?$url/$fichier\"><p><img src='../assets/img/jpg.png'><li class='d text-center'> " . ucfirst($fichier) . " </p></a></li></div>";
 					}
 					if ($ext == 'jpeg' ){
-						echo   "<div class=\" col-lg-2 col-md-4 col-6 folder item\"><a  class='underlineHover' target=\"blank\" href=\"$url/$fichier\"><img src='../assets/img/jpg.png'><li class='d text-center'> " . ucfirst($fichier) . " </li></a></div>";
+						echo   "<div class=\" col-lg-2 col-md-4 col-6 folder item\"><a  class='underlineHover' target=\"blank\" href=\"../pdf?$url/$fichier\"><p><img src='../assets/img/jpg.png'><li class='d text-center'> " . ucfirst($fichier) . " </p></a></li></div>";
 					}
 					if ($ext == 'png' ){
-						echo   "<div class=\" col-lg-2 col-md-4 col-6 folder item\"><a  class='underlineHover' target=\"blank\" href=\"$url/$fichier\"><img src='../assets/img/png.png'><li class='d text-center'> " . ucfirst($fichier) . " </li></div>";
+						echo   "<div class=\" col-lg-2 col-md-4 col-6 folder item\"><a  class='underlineHover' target=\"blank\" href=\"../pdf?$url/$fichier\"><p><img src='../assets/img/png.png'><li class='d text-center'> " . ucfirst($fichier) . " </p></a></li></div>";
 					}
 				} 
 			}if($ext == ''){
