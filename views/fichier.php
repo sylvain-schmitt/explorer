@@ -95,3 +95,5 @@ if (isset($_POST) && !empty($_POST)) {
 				</div>
 			</form>
 						<?php endif; ?>
+		</div>
+	</div>	

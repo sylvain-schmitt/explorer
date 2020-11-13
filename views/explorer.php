@@ -100,7 +100,9 @@ if (isset($_POST) && !empty($_POST)) {
 					</div>
 				</div>
 				</div>
-            </form>	
+			</form>	
+		</div>
+	</div>	
 </div>
   
 
