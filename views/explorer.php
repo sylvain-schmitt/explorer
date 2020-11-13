@@ -57,8 +57,6 @@ if (isset($_POST) && !empty($_POST)) {
 	}
 	}
 
-	
-
 ?>
 
 <div class="container-fluid h-100">

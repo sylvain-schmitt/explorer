@@ -10,7 +10,7 @@ session_start();
 	header('Location: /');
 	exit;
 }
-
+$fichiers = null;
 $file = new Helpers;
 $alert = new Helpers;
 $upload = new ModalUpload;
@@ -19,15 +19,16 @@ $verif = Helpers::verif_file();
 $role = $_SESSION['user']['role'];
 $path = explode('files', $_SERVER['REQUEST_URI'])[1];
 $url = 'upload' . $path;
-$dir = opendir($url); 
+$dir = opendir($url);
+	
+	while($files = readdir($dir)) { 
 
-while($files = readdir($dir)) { 
-if($files != '.' && $files != '..' ) 
-{ 
-$fichiers[] = $files ; 
-} 
-} 
-closedir($dir);
+	if($files != '.' && $files != '..' ) 
+	{ 
+	$fichiers[] = $files ;
+	} 
+	} 
+	closedir($dir);
 
 if (isset($_POST) && !empty($_POST)) {
 	
@@ -43,6 +44,7 @@ if (isset($_POST) && !empty($_POST)) {
 	}
 	}
 
+ 
 	?>
 
 <div class="container-fluid h-100">
@@ -61,6 +63,7 @@ if (isset($_POST) && !empty($_POST)) {
 
 	</div>
 </div>
+						<?php if(isset($fichiers)):?>
 			<!--Modal delete folder -->
 			<form action="" method="post" >
 				<div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="delete" aria-hidden="true">
@@ -76,6 +79,7 @@ if (isset($_POST) && !empty($_POST)) {
 					<div class="form-group">
                     <select class="custom-select" name="fichier">
 						<option selected>Sélectionner le fichier à supprimer</option>
+
 						<?php foreach($fichiers as $fichier): ?>
 						<option   value="<?= $fichier ?>"><?= $fichier ?> </option>
 						<?php endforeach ?>
@@ -89,4 +93,5 @@ if (isset($_POST) && !empty($_POST)) {
 					</div>
 				</div>
 				</div>
-            </form>
+			</form>
+						<?php endif; ?>

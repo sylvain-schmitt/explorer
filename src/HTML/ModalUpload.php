@@ -4,14 +4,17 @@ namespace App\HTML;
 class ModalUpload{
 
     public function upload(){
-        return <<<HTML
-        							
+		 			
+
+		return <<<HTML
 							<div class="btn-group" role="group" aria-label="Basic example">
 								<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#uploadFichier">Uploader un fichier</button>
 							</div>
-							<div class="btn-group" role="group" aria-label="Basic example">
-								<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#delete">Suppimer un fichier</button>
-							</div>
+								<div class="btn-group" role="group" aria-label="Basic example">
+									<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#delete">Suppimer un fichier</button>
+								</div>
+
+							 
 						</div>
 								
 				</div>
