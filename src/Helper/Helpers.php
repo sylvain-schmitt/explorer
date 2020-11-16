@@ -96,7 +96,7 @@ public static function verif_file(){
     if($_SERVER["REQUEST_METHOD"] == "POST"){
 		// Vérifie si le fichier a été uploadé sans erreur.
 		if(isset($_FILES["photo"]) && $_FILES["photo"]["error"] == 0){
-			$allowed = array("jpg" => "image/jpg", "jpeg" => "image/jpeg", "pdf" => "document/pdf", "png" => "image/png");
+			$allowed = array("jpg" => "image/jpg", "jpeg" => "image/jpeg", "pdf" => "application/pdf", "png" => "image/png");
 			$filename = $_FILES["photo"]["name"];
 			$filetype = $_FILES["photo"]["type"];
 			$filesize = $_FILES["photo"]["size"];
@@ -130,6 +130,7 @@ public static function verif_file(){
 					$_SESSION['message'] = "Votre fichier a été téléchargé avec succès.";
 				} 
 			} else{
+
 				$_SESSION['erreur'] = "Erreur: Il y a eu un problème de téléchargement de votre fichier. Veuillez réessayer."; 
 			}
 		} 
