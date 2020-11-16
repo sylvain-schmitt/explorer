@@ -125,6 +125,7 @@ public static function verif_file(){
 				if(file_exists('upload/' . $path . '/' . $_FILES["photo"]["name"])){
 					$_SESSION['erreur'] = $_FILES["photo"]["name"] . " existe déjà.";
 				} else{
+					$_FILES["photo"]["name"] = str_replace(" ", "-", $_FILES["photo"]["name"]);
 					move_uploaded_file($_FILES["photo"]["tmp_name"], 'upload/' . $path. '/' . $_FILES["photo"]["name"]);
 					$_SESSION['message'] = "Votre fichier a été téléchargé avec succès.";
 				} 

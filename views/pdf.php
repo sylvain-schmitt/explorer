@@ -6,7 +6,9 @@ use Spipu\Html2Pdf\Html2Pdf;
 use Spipu\Html2Pdf\Exception\Html2PdfException;
 use Spipu\Html2Pdf\Exception\ExceptionFormatter;
 $_SERVER['REQUEST_URI'];
-$path = $path = explode('pdf?/', $_SERVER['REQUEST_URI'])[1];
+$path = explode('pdf?/', $_SERVER['REQUEST_URI'])[1];
+$file = explode('/', $_SERVER['REQUEST_URI'])[4];
+$filename = explode('.', $file)[0];
 ob_start();
 ?>
 
@@ -22,7 +24,7 @@ try{
     $pdf->pdf->SetDisplayMode('fullpage');
     $pdf->writeHTML($content);
 
-    $pdf->Output('document.pdf');
+    $pdf->Output($filename . '.pdf');
     die;
 }catch(HTML2PDFException $e){
     $pdf->clean();
